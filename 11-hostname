@@ -1,0 +1,6 @@
+#!/bin/sh
+
+printf "\n"
+/usr/bin/figlet -f smslant `hostname`
+printf "\n"
+

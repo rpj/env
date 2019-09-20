@@ -19,9 +19,9 @@ function setPS1 {
     lastcmdstatus=$?
     graycolor="\[\033[1;30m\]"
     timecolor="34m"
-    if [[ $lastcmdstatus != 0 ]]; then
-        timecolor="41;1;33m"
-    fi
+#    if [[ $lastcmdstatus != 0 ]]; then
+#        timecolor="41;1;33m"
+#    fi
     usercolor="0;36m"
     if [[ $EUID == 0 ]]; then
 	    usercolor="1;31m"

@@ -1,0 +1,9 @@
+Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
+HostKeyAlgorithms ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh-rsa,ssh-dss,ssh-ed25519
+KexAlgorithms diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,curve25519-sha256@libssh.org,diffie-hellman-group16-sha512
+MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,umac-128-etm@openssh.com
+
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+Banner none
+PrintMotd no

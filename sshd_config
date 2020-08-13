@@ -6,3 +6,4 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 Banner none
 PrintMotd no
+DebianBanner no

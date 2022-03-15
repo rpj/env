@@ -56,8 +56,8 @@ export PROMPT_COMMAND="setPS1"
 export EDITOR=vim
 
 alias csr='EDITOR=vim cscope -R'
-alias grb='git checkout master && git pull --rebase && git checkout - && git rebase master'
-alias grbi='git checkout master && git pull --rebase && git checkout - && git rebase -i master'
+alias grb='git checkout main && git pull --rebase && git checkout - && git rebase main'
+alias grbi='git checkout main && git pull --rebase && git checkout - && git rebase -i main'
 alias gdm='git diff | code -'
 
 export PYTHONUNBUFFERED=1

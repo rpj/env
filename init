@@ -2,6 +2,13 @@
 
 { # this ensures the entire script is downloaded #
 
+grep "source ~/.env/bashrc" ~/.bashrc > /dev/null 2>&1
+
+if [[ $? == 0 || -d ~/.env ]]; then
+  echo "Env is already initalized! Exiting without making changes."
+  exit 0
+fi
+
 git clone git@github.com:rpj/env.git ~/.env
 
 if [[ $? != 0 && ! -d ~/.env ]]; then
@@ -9,10 +16,6 @@ if [[ $? != 0 && ! -d ~/.env ]]; then
   git clone https://github.com/rpj/env.git ~/.env
 fi
 
-grep "source ~/.env/bashrc" ~/.bashrc > /dev/null 2>&1
-
-if [[ $? != 0 ]]; then
-  echo -e "\nsource ~/.env/bashrc" >> ~/.bashrc
-fi
+echo -e "\nsource ~/.env/bashrc" >> ~/.bashrc
 
 } # this ensures the entire script is downloaded #

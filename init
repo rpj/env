@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+{ # this ensures the entire script is downloaded #
+
+git clone git@github.com:rpj/env.git ~/.env
+
+if [[ $? != 0 && ! -d ~/.env ]]; then
+  echo "SSH clone failed, falling back to HTTPS!"
+  git clone https://github.com/rpj/env.git ~/.env
+fi
+
+grep "source ~/.env/bashrc" ~/.bashrc > /dev/null 2>&1
+
+if [[ $? != 0 ]]; then
+  echo -e "\nsource ~/.env/bashrc" >> ~/.bashrc
+fi
+
+} # this ensures the entire script is downloaded #

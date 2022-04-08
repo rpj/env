@@ -59,5 +59,6 @@ alias csr='EDITOR=vim cscope -R'
 alias grb='git checkout main && git pull --rebase && git checkout - && git rebase main'
 alias grbi='git checkout main && git pull --rebase && git checkout - && git rebase -i main'
 alias gdm='git diff | code -'
+alias upup='apt -y update && apt -y upgrade && apt -y autoremove'
 
 export PYTHONUNBUFFERED=1

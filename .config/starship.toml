@@ -1,0 +1,21 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[status]
+disabled = false
+format = '[$status]($style) '
+
+[time]
+disabled = false
+format = '[$time]($style) '
+style = 'blue'
+
+[directory]
+truncate_to_repo = false
+
+[package]
+disabled = true
+
+[character]
+success_symbol = '🍔'
+error_symbol = '🔥'
